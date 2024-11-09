@@ -1,0 +1,11 @@
+CREATE TABLE books (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  author VARCHAR(255) NOT NULL,
+  rating INTEGER CHECK (rating >= 1 AND rating <= 5),
+  date_read DATE NOT NULL,
+  review TEXT,
+  cover_url VARCHAR(255)
+);
+
+https://openlibrary.org/search?q=book&mode=everything use this link to get the books title and use when add books
